@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>Git, de 0 a apaga-fuegos en 2h</title>
 
         <link rel="stylesheet" href="css/reveal.css">
         <link rel="stylesheet" href="css/theme/solarized.css">
@@ -54,13 +54,16 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 </section>
                 <section>
                     <h2>¿Cómo empieza la película?</h2>
+                    <img src="gifs/init.gif"/>
                 </section>
                 <section data-transition="zoom">
                     <h2>¿Cómo empieza la película?</h2>
                     <p> <code> git init </code></p>
                     <p class="fragment"> <code> git clone </code></p>
                 </section>
-                <section><h2>Herramientas básicas que nos ofrece</h2></section>
+                <section><h2>Herramientas básicas que nos ofrece</h2>
+                    <img src="gifs/tools.gif"/>
+                </section>
                 <section data-transition="zoom">
                     <h2>Herramientas básicas que nos ofrece</h2>
                     <p> add </p>
@@ -75,27 +78,98 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
                 </section>
 
                 <section data-transition="zoom">
+                    <h2> remotes </h2>
                     <p> Un <i>remote</i> permite a varias personas colaborar en un mismo repositorio </p>
                     <code> <center>
-                            <p class="fragment">git remote -v</p>
-                            <p class="fragment">git remote add origin https://github.com/foo/bar.git</p>
-                            <p class="fragment">git remote remove origin</p>
-                    </center> </code>
+                            <p class="fragment"><code>git remote -v</code></p>
+                            <p class="fragment"><code>git remote add origin https://github.com/foo/bar.git</code></p>
+                            <p class="fragment"><code>git remote remove origin</code></p>
+                        </center> </code>
                 </section>
 
                 <section data-transition="zoom">
+                    <h2> remotes </h2>
                     <p> Un repositorio puede tener tantos <i>remotes</i> como queramos </p>
                     <code> <center>
-                            <p class="fragment">git remote add foo https://github.com/foo/bar.git</p>
-                            <p class="fragment">git remote add bar https://github.com/foo/bar.git</p>
-                            <p class="fragment">git remote add baz https://github.com/foo/bar.git</p>
-                    </center> </code>
+                            <p class="fragment"><code>git remote add foo https://github.com/foo/bar.git</code></p>
+                            <p class="fragment"><code>git remote add bar https://github.com/foo/bar.git</code></p>
+                            <p class="fragment"><code>git remote add baz https://github.com/foo/bar.git</code></p>
+                        </center> </code>
                 </section>
 
                 <section data-transition="zoom">
+                    <h2> remotes </h2>
                     ¿Os suena lo de <i>origin</i>, verdad?
                     <p class="fragment"><code>git pull origin develop</code></p>
                     <p class="fragment"><code>git pull gatito develop</code></p>
+                    <p class="fragment"><code>git push origin develop</code></p>
+                    <p class="fragment"><code>git push gatito develop</code></p>
+                </section>
+
+                <section>
+                    <h2> Vayámonos por las ramas </h2>
+                    <img src="gifs/branches.gif" width="400"/>
+                </section>
+                <section data-transition="zoom">
+                    <h2> Vayámonos por las ramas </h2>
+                    <p> git branch </p>
+                    <p class="fragment"> <code>git branch -b <i>branchname</i></code></p>
+                    <p class="fragment"> <code>git branch -d <i>branchname</i></code></p>
+                </section>
+
+                <section>
+                    <h2> La clave está en la mezcla </h2>
+                    <img src="gifs/cocktail.gif"/>
+                </section>
+                <section data-transition="zoom">
+                    <h2> La clave está en la mezcla </h2>
+                    <p> <code>git merge</code> </p>
+                    <p class="fragment"> <code>git branch <i>branchname</i></code></p>
+                </section>
+
+                <section>
+                    <h2> git fetch </h2>
+                    <img src="gifs/fetch.gif"/>
+                </section>
+                <section data-transition="zoom">
+                    <h2> git fetch </h2>
+                    <p> <code>git fetch</code> + <code>git merge</code> = <code>git pull</code> </p>
+                    <p class="fragment"> <code>git fetch</code></p>
+                    <p class="fragment"> <code>git checkout develop</code></p>
+                    <p class="fragment"> <code>git merge origin/develop</code></p>
+                    <p class="fragment"> <code>git merge gatito/develop</code></p>
+                    <p class="fragment"> <code>git pull origin develop</code></p>
+                    <p class="fragment"> <code>git pull gatito develop</code></p>
+                </section>
+
+                <section>
+                <h2> it's all history </h2>
+                    <img src="gifs/log.png"/>
+                </section>
+
+                <section>
+                <h2> stage </h2>
+                    <img src="gifs/ready.webp"/>
+                </section>
+
+                <section>
+                <h2> stash </h2>
+                    <img src="gifs/stash.gif"/>
+                </section>
+
+                <section>
+                <h2> stash </h2>
+                <p> <code>git stash</code></p>
+                <p class="fragment"> <code>git stash save "estoy haciendo cositas"</code></p>
+                <p class="fragment"> <code>git stash list</code></p>
+                <p class="fragment"> <code>git stash show stash@{0}</code></p>
+                <p class="fragment"> <code>git stash apply stash@{0}</code></p>
+                <p class="fragment"> <code>git stash drop stash@{0}</code></p>
+                </section>
+
+                <section>
+                <h2> Demo </h2>
+                    <img src="gifs/demo.gif"/>
                 </section>
             </div>
         </div>
@@ -110,10 +184,10 @@ Reveal.initialize({
 
     // More info https://github.com/hakimel/reveal.js#dependencies
     dependencies: [
-    { src: 'plugin/markdown/marked.js' },
-    { src: 'plugin/markdown/markdown.js' },
-    { src: 'plugin/notes/notes.js', async: true },
-    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
     ]
 });
         </script>
