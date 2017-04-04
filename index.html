@@ -2,194 +2,237 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>Git, de 0 a apaga-fuegos en 2h</title>
+                <title>Git, de 0 a apaga-fuegos en 2h</title>
 
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/solarized.css">
+                <link rel="stylesheet" href="css/reveal.css">
+                    <link rel="stylesheet" href="css/theme/solarized.css">
 
-        <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+                        <!-- Theme used for syntax highlighting of code -->
+                        <link rel="stylesheet" href="lib/css/zenburn.css">
 
-        <!-- Printing and PDF exports -->
-        <script>
-var link = document.createElement( 'link' );
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
-    </head>
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                <section>
-                    <h2>Git</h2>
-                    <p class="fragment"> de 0 a <i>apaga-fuegos</i> en 2h</p>
-                </section>
-                <section><h2>¿Quién soy?</h2></section>
-                <section data-transition="zoom">
-                    <h2>¿Quién soy?</h2>
-                    <p>JA Samitier (@hiberus.com)</p>
-                    <p class="fragment">Desarrollador (últimamente e-Commerce)</p>
-                    <p class="fragment">@eckelon</p>
-                    <p class="fragment">(Friki :D)</p>
-                </section>
-                <section><h2>Git</h2></section>
+                            <!-- Printing and PDF exports -->
+                            <script>
+                                var link = document.createElement( 'link' );
+                                link.rel = 'stylesheet';
+                                link.type = 'text/css';
+                                link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+                                document.getElementsByTagName( 'head' )[0].appendChild( link );
+                            </script>
+                        </head>
+                        <body>
+                            <div class="reveal">
+                                <div class="slides">
+                                    <section>
+                                        <h2>Git</h2>
+                                        <p class="fragment"> de 0 a <i>apaga-fuegos</i> en 2h</p>
+                                    </section>
+                                    <section><h2>¿Quién soy?</h2></section>
+                                    <section data-transition="zoom">
+                                        <h2>¿Quién soy?</h2>
+                                        <p>JA Samitier (@hiberus.com)</p>
+                                        <p class="fragment">Desarrollador (últimamente e-Commerce)</p>
+                                        <p class="fragment">@eckelon</p>
+                                        <p class="fragment">(Friki :D)</p>
+                                    </section>
+                                    <section>
+                                        <h2>Git</h2>
+                                        <img src="img/git-fire.png" width="500px"/>
+                                    </section>
 
-                <section data-transition="zoom">
-                    <h2>Git</h2>
-                    <section>Sistema de control de versiones</section>
-                    <section>distribuído (descentralizado)</section>
-                    <section>multiplataforma</section>
-                    <section>es software libre (¡y gratis!)</section>
-                </section>
-                <section><h2>Git</h2>
-                    <section>Creado en 2005 por Linus Torvalds</section>
-                    <section>(Si, el que creó Linux en 1991 :D)</section>
-                    <section>
-                        <a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git</a>
-                    </section>
-                </section>
-                <section>
-                    <h2>¿Cómo empieza la película?</h2>
-                    <img src="gifs/init.gif"/>
-                </section>
-                <section data-transition="zoom">
-                    <h2>¿Cómo empieza la película?</h2>
-                    <p> <code> git init </code></p>
-                    <p class="fragment"> <code> git clone </code></p>
-                </section>
-                <section><h2>Herramientas básicas que nos ofrece</h2>
-                    <img src="gifs/tools.gif"/>
-                </section>
-                <section data-transition="zoom">
-                    <h2>Herramientas básicas que nos ofrece</h2>
-                    <p> add </p>
-                    <p class="fragment"> commit </p>
-                    <p class="fragment"> checkout </p>
-                    <p class="fragment"> reset </p>
-                    <p class="fragment"> merge </p>
-                </section>
-                <section data-transition="zoom">
-                    ¿Pero y el pull, push?
-                    <p class="fragment"> Hablemos de <i>remotes</i></p>
-                </section>
+                                    <section data-transition="zoom">
+                                        <h2>Git</h2>
+                                        <section>Sistema de control de versiones</section>
+                                        <section>distribuído (descentralizado)</section>
+                                        <section>multiplataforma</section>
+                                        <section>es software libre (¡y gratis!)</section>
+                                    </section>
+                                    <section><h2>Git</h2>
+                                        <section>Creado en 2005 por Linus Torvalds</section>
+                                        <section>(Si, el que creó Linux en 1991 :D)</section>
+                                        <section>
+                                            <a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git</a>
+                                        </section>
+                                    </section>
+                                    <section>
+                                        <h2>¿Cómo empieza la película?</h2>
+                                        <img src="gifs/init.gif"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2>¿Cómo empieza la película?</h2>
+                                        <p> <code> git init </code></p>
+                                        <p class="fragment"> <code> git clone </code></p>
+                                    </section>
+                                    <section><h2>Herramientas básicas que nos ofrece</h2>
+                                        <img src="gifs/tools.gif"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2>Herramientas básicas que nos ofrece</h2>
+                                        <p> add </p>
+                                        <p class="fragment"> commit </p>
+                                        <p class="fragment"> checkout </p>
+                                        <p class="fragment"> reset </p>
+                                        <p class="fragment"> merge </p>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        ¿Pero y el pull, push?
+                                        <p class="fragment"> Hablemos de <i>remotes</i></p>
+                                    </section>
 
-                <section data-transition="zoom">
-                    <h2> remotes </h2>
-                    <p> Un <i>remote</i> permite a varias personas colaborar en un mismo repositorio </p>
-                    <code> <center>
-                            <p class="fragment"><code>git remote -v</code></p>
-                            <p class="fragment"><code>git remote add origin https://github.com/foo/bar.git</code></p>
-                            <p class="fragment"><code>git remote remove origin</code></p>
-                        </center> </code>
-                </section>
+                                    <section data-transition="zoom">
+                                        <h2> remotes </h2>
+                                        <p> Un <i>remote</i> permite a varias personas colaborar en un mismo repositorio </p>
+                                        <code> <center>
+                                                <p class="fragment"><code>git remote -v</code></p>
+                                                <p class="fragment"><code>git remote add origin https://github.com/foo/bar.git</code></p>
+                                                <p class="fragment"><code>git remote remove origin</code></p>
+                                            </center> </code>
+                                    </section>
 
-                <section data-transition="zoom">
-                    <h2> remotes </h2>
-                    <p> Un repositorio puede tener tantos <i>remotes</i> como queramos </p>
-                    <code> <center>
-                            <p class="fragment"><code>git remote add foo https://github.com/foo/bar.git</code></p>
-                            <p class="fragment"><code>git remote add bar https://github.com/foo/bar.git</code></p>
-                            <p class="fragment"><code>git remote add baz https://github.com/foo/bar.git</code></p>
-                        </center> </code>
-                </section>
+                                    <section data-transition="zoom">
+                                        <h2> remotes </h2>
+                                        <p> Un repositorio puede tener tantos <i>remotes</i> como queramos </p>
+                                        <code> <center>
+                                                <p class="fragment"><code>git remote add foo https://github.com/foo/bar.git</code></p>
+                                                <p class="fragment"><code>git remote add bar https://github.com/foo/bar.git</code></p>
+                                                <p class="fragment"><code>git remote add baz https://github.com/foo/bar.git</code></p>
+                                            </center> </code>
+                                    </section>
 
-                <section data-transition="zoom">
-                    <h2> remotes </h2>
-                    ¿Os suena lo de <i>origin</i>, verdad?
-                    <p class="fragment"><code>git pull origin develop</code></p>
-                    <p class="fragment"><code>git pull gatito develop</code></p>
-                    <p class="fragment"><code>git push origin develop</code></p>
-                    <p class="fragment"><code>git push gatito develop</code></p>
-                </section>
+                                    <section data-transition="zoom">
+                                        <h2> remotes </h2>
+                                        ¿Os suena lo de <i>origin</i>, verdad?
+                                        <p class="fragment"><code>git pull origin develop</code></p>
+                                        <p class="fragment"><code>git pull gatito develop</code></p>
+                                        <p class="fragment"><code>git push origin develop</code></p>
+                                        <p class="fragment"><code>git push gatito develop</code></p>
+                                    </section>
 
-                <section>
-                    <h2> Vayámonos por las ramas </h2>
-                    <img src="gifs/branches.gif" width="400"/>
-                </section>
-                <section data-transition="zoom">
-                    <h2> Vayámonos por las ramas </h2>
-                    <p> git branch </p>
-                    <p class="fragment"> <code>git branch -b <i>branchname</i></code></p>
-                    <p class="fragment"> <code>git branch -d <i>branchname</i></code></p>
-                </section>
+                                    <section>
+                                        <h2> Vayámonos por las ramas </h2>
+                                        <img src="gifs/branches.gif" width="400"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> Vayámonos por las ramas </h2>
+                                        <p> git branch </p>
+                                        <p class="fragment"> <code>git branch -b <i>branchname</i></code></p>
+                                        <p class="fragment"> <code>git branch -d <i>branchname</i></code></p>
+                                    </section>
+                                    <section>
+                                        <h2> stage </h2>
+                                        <img src="gifs/ready.gif"/>
+                                    </section>
 
-                <section>
-                    <h2> La clave está en la mezcla </h2>
-                    <img src="gifs/cocktail.gif"/>
-                </section>
-                <section data-transition="zoom">
-                    <h2> La clave está en la mezcla </h2>
-                    <p> <code>git merge</code> </p>
-                    <p class="fragment"> <code>git branch <i>branchname</i></code></p>
-                </section>
+                                    <section>
+                                        <h2> stash </h2>
+                                        <img src="gifs/stash.gif"/>
+                                    </section>
+                                    <section>
+                                        <h2> stash </h2>
+                                        <p> <code>git stash</code></p>
+                                        <p class="fragment"> <code>git stash save "estoy haciendo cositas"</code></p>
+                                        <p class="fragment"> <code>git stash list</code></p>
+                                        <p class="fragment"> <code>git stash show stash@{0}</code></p>
+                                        <p class="fragment"> <code>git stash apply stash@{0}</code></p>
+                                        <p class="fragment"> <code>git stash drop stash@{0}</code></p>
+                                    </section>
 
-                <section>
-                    <h2> git fetch </h2>
-                    <img src="gifs/fetch.gif"/>
-                </section>
-                <section data-transition="zoom">
-                    <h2> git fetch </h2>
-                    <p> <code>git fetch</code> + <code>git merge</code> = <code>git pull</code> </p>
-                    <p class="fragment"> <code>git fetch</code></p>
-                    <p class="fragment"> <code>git checkout develop</code></p>
-                    <p class="fragment"> <code>git merge origin/develop</code></p>
-                    <p class="fragment"> <code>git merge gatito/develop</code></p>
-                    <p class="fragment"> <code>git pull origin develop</code></p>
-                    <p class="fragment"> <code>git pull gatito develop</code></p>
-                </section>
+                                    <section>
+                                        <h2> Please stop! </h2>
+                                        <img src="gifs/wait.gif" width="400"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> Resumen </h2>
+                                        <img src="img/commands.jpg" />
+                                    </section>
 
-                <section>
-                <h2> it's all history </h2>
-                    <img src="gifs/log.png"/>
-                </section>
+                                    <section>
+                                        <h2> Un poquito de flow </h2>
+                                        <img src="gifs/gitflow.gif" width="400"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> Gitflow </h2>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> Gitflow </h2>
+                                        <img src="img/gitflow.png" />
+                                    </section>
 
-                <section>
-                <h2> stage </h2>
-                    <img src="gifs/ready.webp"/>
-                </section>
+                                    <section>
+                                        <h2> La clave está en la mezcla </h2>
+                                        <img src="gifs/cocktail.gif"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> La clave está en la mezcla </h2>
+                                        <p> <code>git merge</code> </p>
+                                        <p class="fragment"> <code>git branch <i>branchname</i></code></p>
+                                    </section>
 
-                <section>
-                <h2> stash </h2>
-                    <img src="gifs/stash.gif"/>
-                </section>
+                                    <section>
+                                        <h2> git fetch </h2>
+                                        <img src="gifs/fetch.gif"/>
+                                    </section>
+                                    <section data-transition="zoom">
+                                        <h2> git fetch </h2>
+                                        <p> <code>git fetch</code> + <code>git merge</code> = <code>git pull</code> </p>
+                                        <p class="fragment"> <code>git fetch</code></p>
+                                        <p class="fragment"> <code>git checkout develop</code></p>
+                                        <p class="fragment"> <code>git merge origin/develop</code></p>
+                                        <p class="fragment"> <code>git merge gatito/develop</code></p>
+                                        <p class="fragment"> <code>git pull origin develop</code></p>
+                                        <p class="fragment"> <code>git pull gatito develop</code></p>
+                                    </section>
 
-                <section>
-                <h2> stash </h2>
-                <p> <code>git stash</code></p>
-                <p class="fragment"> <code>git stash save "estoy haciendo cositas"</code></p>
-                <p class="fragment"> <code>git stash list</code></p>
-                <p class="fragment"> <code>git stash show stash@{0}</code></p>
-                <p class="fragment"> <code>git stash apply stash@{0}</code></p>
-                <p class="fragment"> <code>git stash drop stash@{0}</code></p>
-                </section>
+                                    <section>
+                                        <h2> it's all history </h2>
+                                        <img src="gifs/log.png"/>
+                                    </section>
 
-                <section>
-                <h2> Demo </h2>
-                    <img src="gifs/demo.gif"/>
-                </section>
-            </div>
-        </div>
 
-        <script src="lib/js/head.min.js"></script>
-        <script src="js/reveal.js"></script>
 
-        <script>
-// More info https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-    history: true,
 
-    // More info https://github.com/hakimel/reveal.js#dependencies
-    dependencies: [
-        { src: 'plugin/markdown/marked.js' },
-        { src: 'plugin/markdown/markdown.js' },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                                    <section>
+                                        <h2> Demo </h2>
+                                        <img src="gifs/demo.gif"/>
+                                    </section>
+                                    <section>
+                                        <h2> Preguntas? </h2>
+                                        <img src="gifs/dudas.gif"/>
+                                    </section>
+
+                                    <section>
+                                        <h2> #git @ hInternet.slack.com </h2>
+                                        <img src="gifs/slack.gif"/>
+                                    </section>
+
+
+
+                                    <section>
+                                        <h2> Gracias! </h2>
+                                        <img src="gifs/thanks.gif"/>
+                                    </section>
+
+
+                                </div>
+                            </div>
+
+                            <script src="lib/js/head.min.js"></script>
+                            <script src="js/reveal.js"></script>
+
+                            <script>
+                                // More info https://github.com/hakimel/reveal.js#configuration
+                                Reveal.initialize({
+                                        history: true,
+
+                                        // More info https://github.com/hakimel/reveal.js#dependencies
+                                        dependencies: [
+                                            { src: 'plugin/markdown/marked.js' },
+                                            { src: 'plugin/markdown/markdown.js' },
+                                            { src: 'plugin/notes/notes.js', async: true },
+                                            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
     ]
-});
-        </script>
-    </body>
-</html>
+                                });
+                            </script>
+                        </body>
+                    </html>
