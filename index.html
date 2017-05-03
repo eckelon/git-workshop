@@ -21,7 +21,6 @@
         <div class="left">
             <p>Managing code with git</p>
         </div>
-        <div class="right"><img src="img/hiberusDig.png" width="200"/></div>
         <div class="slides">
             <section>
                 <h2>Managing code with Git</h2>
@@ -218,6 +217,69 @@
                     <p class="code"> 💆 + git reflog + git cherry-pick</p>
                 </div>
             </section>
+
+            <section>
+                <h2>Merge vs Rebase</h2>
+                <div class="textright">
+                <h4>destructive vs non-destructive</h4>
+                    <p class="code">git rebase feature/foo</p>
+                    <p class="code">git rebase -i HEAD~5</p>
+                    <p class="code">git pull --rebase </p>
+                </div>
+                <h4>⚠️ If other people is using the target branch... use merge!</h4>
+            </section>
+
+
+            <section>
+                <h2>Git blame</h2>
+                <img src="img/gitblame.jpg" width="300"/>
+                <div class="textright">
+                    <p class="code">git blame commit..commit -- src/Foo.java -w</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Git submodules</h2>
+                <div class="textright">
+                    <p class="code">git submodule add git@host:name path/to/submodule</p>
+                    <p class="code">git submodule init</p>
+                    <p class="code">git submodule update path/to/submodule</p>
+                    <p class="code">git submodule rm path/to/submodule</p>
+                    <p class="code">cat .gitmodules</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>Git Bisect</h2>
+                <div class="textright">
+                    <h4>git <i>debugging</i></h4>
+                    <p class="code">git bisect start</p>
+                    <p class="code">git bisect good fda82j</p>
+                    <p class="code">git bisect bad hg38h4</p>
+                    <p class="code">check</p>
+                    <p class="code">git bisect bad/good</p>
+                    <p class="code">...</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>SVN repository? c'mon</h2>
+                <div class="textright">
+                    <p class="code">git svn clone svn_url</p>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>How do I clone a single branch?</h2>
+                <div class="textright">
+                    <p class="code">git clone <url> --branch <branch> --single-branch</p>
+                </div>
+            </section>
+
             <section>
                 <h2>References:</h2>
                 <div class="textright">
