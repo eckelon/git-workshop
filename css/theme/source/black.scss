@@ -16,7 +16,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
+$backgroundColor: #191919;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -40,6 +40,35 @@ $heading4Size: 1.0em;
 section.has-light-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #222;
+	}
+}
+
+.reveal {
+	.left {
+		padding: .5rem 3rem;
+		font-size: 1.6rem;
+		text-align: left;
+	}
+	.present {
+		display: block;
+		h2 {
+			text-align: left;
+			font-size: 2rem;
+			&.center {
+				text-align: center;
+			}
+		}
+
+		.textright {
+			padding-top: 5rem;
+			float: right;
+			text-align: right;
+			font-size: 1.8rem;
+			.code {
+				font-family: 'Courier';
+				font-size: 1.6rem;
+			}
+		}
 	}
 }
 
