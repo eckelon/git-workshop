@@ -44,11 +44,24 @@ section.has-light-background {
 }
 
 .reveal {
-	.left {
+	.reveal-header {
+		width: 100vw;
+		display: block;
 		padding: .5rem 3rem;
-		font-size: 1.6rem;
-		text-align: left;
+		.left {
+			vertical-align: middle;
+			font-size: 1.6rem;
+			text-align: left;
+			display: inline-block;
+			width: 90vw;
+		}
+		.right {
+			vertical-align: middle;
+			display: inline-block;
+			text-align: right;
+		}
 	}
+
 	.present {
 		display: block;
 		h2 {

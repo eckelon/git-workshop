@@ -1,326 +1,323 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Managing code with git</title>
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css"><!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css"><!-- Printing and PDF exports -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Managing code with git</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css"><!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css"><!-- Printing and PDF exports -->
 
-    <script>
-                                var link = document.createElement( 'link' );
-                                link.rel = 'stylesheet';
-                                link.type = 'text/css';
-                                link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-                                document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-</head>
-<body>
-    <div class="reveal">
-        <div class="left">
-            <p>Managing code with git</p>
-        </div>
-        <div class="slides">
-            <section>
-                <h2 class="center">Managing code with Git</h2>
-            </section>
-
-            <div class="right">
-                <img src="" width="100"/>
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="reveal-header">
+                <div class="left">
+                    <p>Managing code with git</p>
+                </div>
+                <div class="right">
+                    <img src="./img/medux.png" width="100"/>
+                </div>
             </div>
-            <section data-transition="zoom">
-                <h2>Who am I?</h2>
-                <div class="textright">
-                    <p>JA Samitier (<a href="https://twitter.com/eckelon">@eckelon</a>)</p>
-                    <p>Software Developer (lately eCommerce)</p>
-                    <p>I ♥️ my job</p>
-                </div>
-            </section>
-            <section>
-                <img src="img/git-fire.png" width="500px">
-            </section>
-            <section data-transition="zoom">
-                <h2>Git</h2>
-                <div class="textright">
-                    <p>DVCS</p>
-                    <p>multiplatform</p>
-                    <p>open source and free (as a beer)</p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>Everything starts with a</h2>
-                <div class="textright">
-                    <p><code>git init</code></p>
-                    <p><code>(or a git clone)</code></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>Basic stuff</h2>
-                <div class="textright">
-                    <p>add</p>
-                    <p>commit</p>
-                    <p>checkout</p>
-                    <p>reset</p>
-                    <p>merge</p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                What about pull and push?
-                <div class="textright">
-                    <p>Let's talk about <i>remotes</i></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>remotes</h2>
-                <div class="textright">
-                    <p><code><code>git remote -v</code></code></p>
-                    <p class="nowrap"><code>git remote add origin https://github.com/foo/bar.git</code></p>
-                    <p><code>git remote remove origin</code></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>remotes</h2>
-                <div class="textright">
-                    <p>We can have as many <i>remotes</i> as we need</p>
-                    <p class="nowrap"><code>git remote add foo https://github.com/foo/bar.git</code></p>
-                    <p class="nowrap"><code>git remote add bar https://github.com/foo/bar.git</code></p>
-                    <p class="nowrap"><code>git remote add baz https://github.com/foo/bar.git</code></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>remotes</h2>
-                <h6>That <i>origin</i> stuff is familiar, right?</h6>
-                <div class="textright">
-                    <p class=" code"><code>git pull origin develop</code></p>
-                    <p class=" code"><code>git pull kitten develop</code></p>
-                    <p class=" code"><code>git push origin develop</code></p>
-                    <p class=" code"><code>git push kitten develop</code></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>I want my own branch!</h2>
-                <div class="textright">
-                    <p class="code">git branch</p>
-                    <p class="code">git checkout -b <i>branchname</i></p>
-                    <p class="code">git branch -d <i>branchname</i></p>
-                </div>
-            </section>
-            <section>
-                <h2>stash</h2>
-                <div class="textright">
-                    <p><code>git stash</code></p>
-                    <p><code>git stash save "I was writing some code when suddenly I needed to merge another branch"</code></p>
-                    <p><code>git stash list</code></p>
-                    <p><code>git stash show stash@{0}</code></p>
-                    <p><code>git stash apply stash@{0}</code></p>
-                    <p><code>git stash drop stash@{0}</code></p>
-                </div>
-            </section>
-            <section>
-                <h2 class="center">Please stop!</h2>
-            </section>
-            <section data-transition="zoom">
-                <h2>Recap</h2><img src="img/commands.jpg">
-            </section>
-            <section data-transition="zoom">
-                <h2>A bit of methodology:</h2>
-                <div class="textright">
-                    <h2>Git Flow</h2>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>Gitflow</h2><img src="img/gitflow.png">
-            </section>
-            <section data-transition="zoom">
-                <h2>Merges</h2>
-                <div class="textright">
-                    <p class="code">git merge</p>
-                    <p class="code">git merge <i>branchname</i></p>
-                    <p class="code">git merge <i>from</i> <i>to</i></p>
-                </div>
-            </section>
-            <section data-transition="zoom">
-                <h2>git fetch</h2>
-                <div class="textright">
-                    <p><code>git fetch</code> + <code>git merge</code> = <code>git pull</code></p>
-                    <p><code>git fetch</code></p>
-                    <p><code>git checkout develop</code></p>
-                    <p><code>git merge origin/develop</code></p>
-                    <p><code>git merge kitten/develop</code></p>
-                    <p><code>git pull origin develop</code></p>
-                    <p><code>git pull kitten develop</code></p>
-                </div>
-            </section>
-            <section>
-                <h2>It's all history</h2>
-                <div class="textright">
-                    <p>Atomic commits. Or else...😑</p>
-                    <p>Describe your commits</p>
-                    <p>More commits than pushes</p>
-                </div>
-            </section>
-            <section>
-                <h2 class="center">Demo</h2>
-            </section>
-            <section>
-                <h2>Setting things up</h2>
-                <div class="textright">
-                    <p class="code">git config --global / --local</p>
-                    <p><a href="https://pastebin.com/raw/6aUKLEi7">Example .gitconfig file</a>
-                    <p class="code">ssh-keygen</p>
-                    <p class="code">cat ~/.ssh/id_rsa.pub</p>
-                    <p class="code">git config credential.helper store</p>
-                </div>
-            </section>
-            <section>
-                <h2>Some extra help</h2>
-                <div class="textright">
-                    <p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh My Zsh!</a> + git plugin = ❤️</p>
-                </div>
-            </section>
-            <section>
-                <h2>Need some GUI help?</h2>
-                <div class="textright">
-                    <p>GitK (available by default)</p>
-                    <p><a href="https://wiki.gnome.org/action/show/Apps/Gitg?action=show&amp;redirect=Gitg">GitG</a> <a href="https://rowanj.github.io/gitx/">GitX</a> <a href=
-                    "https://jonas.github.io/tig/">Tig</a></p>
-                    <p><a href="#">Kdiff3</a> <a href="#">Meld</a></p>
-                </div>
-            </section>
-            <section>
-                <h2 class="center">Let's create a repo with a remote associated</h2>
-            </section>
-            <section>
-                <h2 class="center">Let's use gitflow with our repo</h2>
-            </section>
-            <section>
-                <h2>Let's do some work</h2>
-                <div class="textright">
-                    <p>add . vs add -u</p>
-                    <p>edit - stash - merge</p>
-                    <p>reset vs revert</p>
-                    <p>push -U</p>
-                    <p>push force, bad idea</p>
-                </div>
-            </section>
-            <section>
-                <h2>Resolving conflicts</h2>
-                <div class="textright">
-                    <p>🙄🙄🙄🙄🙄</p>
-                    <p class="code">git mergetool --tool kdiff3</p>
-                    <p class="code">git add -u / git addu</p>
-                    <p class="code">git commit / git ci</p>
-                    <p class="code"><code>find . -type f -name '*.orig' -delete</code></p>
-                </div>
-            </section>
-            <section>
-                <h2>Fire! I lost a bunch of commits!</h2>
-                <div class="textright">
-                    <p>😰😰😰😰😰</p>
-                    <p class="code"> 💆 + git reflog + git cherry-pick</p>
-                </div>
-            </section>
+            <div class="slides">
+                <section>
+                    <h2 class="center">Managing code with Git</h2>
+                </section>
 
-            <section>
-                <h2>Merge vs Rebase</h2>
-                <div class="textright">
-                    <p>destructive vs non-destructive</p>
-                    <p class="code">git rebase feature/foo</p>
-                    <p class="code">git rebase -i HEAD~5</p>
-                    <p class="code">git pull --rebase </p>
-                    <p>⚠️  If other people is using the target branch... use merge! ⚠️ </p>
-                </div>
-            </section>
+                <!-- <section data-transition="zoom"> -->
+                <!--     <h2>Who am I?</h2> -->
+                <!--     <div class="textright"> -->
+                <!--         <p>JA Samitier (<a href="https://twitter.com/eckelon">@eckelon</a>)</p> -->
+                <!--         <p>Software Developer (lately eCommerce)</p> -->
+                <!--         <p>I ♥️ my job</p> -->
+                <!--     </div> -->
+                <!-- </section> -->
+                <section>
+                    <img src="img/git-fire.png" width="500px">
+                </section>
+                <section data-transition="zoom">
+                    <h2>Git</h2>
+                    <div class="textright">
+                        <p>DVCS</p>
+                        <p>multiplatform</p>
+                        <p>open source and free (as a beer)</p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>Everything starts with a</h2>
+                    <div class="textright">
+                        <p><code>git init</code></p>
+                        <p><code>(or a git clone)</code></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>Basic stuff</h2>
+                    <div class="textright">
+                        <p>add</p>
+                        <p>commit</p>
+                        <p>checkout</p>
+                        <p>reset</p>
+                        <p>merge</p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    What about pull and push?
+                    <div class="textright">
+                        <p>Let's talk about <i>remotes</i></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>remotes</h2>
+                    <div class="textright">
+                        <p><code><code>git remote -v</code></code></p>
+                        <p class="nowrap"><code>git remote add origin https://github.com/foo/bar.git</code></p>
+                        <p><code>git remote remove origin</code></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>remotes</h2>
+                    <div class="textright">
+                        <p>We can have as many <i>remotes</i> as we need</p>
+                        <p class="nowrap"><code>git remote add foo https://github.com/foo/bar.git</code></p>
+                        <p class="nowrap"><code>git remote add bar https://github.com/foo/bar.git</code></p>
+                        <p class="nowrap"><code>git remote add baz https://github.com/foo/bar.git</code></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>remotes</h2>
+                    <h6>That <i>origin</i> stuff is familiar, right?</h6>
+                    <div class="textright">
+                        <p class=" code"><code>git pull origin develop</code></p>
+                        <p class=" code"><code>git pull kitten develop</code></p>
+                        <p class=" code"><code>git push origin develop</code></p>
+                        <p class=" code"><code>git push kitten develop</code></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>I want my own branch!</h2>
+                    <div class="textright">
+                        <p class="code">git branch</p>
+                        <p class="code">git checkout -b <i>branchname</i></p>
+                        <p class="code">git branch -d <i>branchname</i></p>
+                    </div>
+                </section>
+                <section>
+                    <h2>stash</h2>
+                    <div class="textright">
+                        <p><code>git stash</code></p>
+                        <p><code>git stash save "I was writing some code when suddenly I needed to merge another branch"</code></p>
+                        <p><code>git stash list</code></p>
+                        <p><code>git stash show stash@{0}</code></p>
+                        <p><code>git stash apply stash@{0}</code></p>
+                        <p><code>git stash drop stash@{0}</code></p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="center">Please stop!</h2>
+                </section>
+                <section data-transition="zoom">
+                    <h2>Recap</h2><img src="img/commands.jpg">
+                </section>
+                <section data-transition="zoom">
+                    <h2>A bit of methodology:</h2>
+                    <div class="textright">
+                        <h2>Git Flow</h2>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>Gitflow</h2><img src="img/gitflow.png">
+                </section>
+                <section data-transition="zoom">
+                    <h2>Merges</h2>
+                    <div class="textright">
+                        <p class="code">git merge</p>
+                        <p class="code">git merge <i>branchname</i></p>
+                        <p class="code">git merge <i>from</i> <i>to</i></p>
+                    </div>
+                </section>
+                <section data-transition="zoom">
+                    <h2>git fetch</h2>
+                    <div class="textright">
+                        <p><code>git fetch</code> + <code>git merge</code> = <code>git pull</code></p>
+                        <p><code>git fetch</code></p>
+                        <p><code>git checkout develop</code></p>
+                        <p><code>git merge origin/develop</code></p>
+                        <p><code>git merge kitten/develop</code></p>
+                        <p><code>git pull origin develop</code></p>
+                        <p><code>git pull kitten develop</code></p>
+                    </div>
+                </section>
+                <section>
+                    <h2>It's all history</h2>
+                    <div class="textright">
+                        <p>Atomic commits. Or else...😑</p>
+                        <p>Describe your commits</p>
+                        <p>More commits than pushes</p>
+                    </div>
+                </section>
+                <!-- <section> -->
+                <!--     <h2 class="center">Demo</h2> -->
+                <!-- </section> -->
+                <section>
+                    <h2>Setting things up</h2>
+                    <div class="textright">
+                        <p class="code">git config --global / --local</p>
+                        <p><a href="https://pastebin.com/raw/6aUKLEi7">Example .gitconfig file</a>
+                        <p class="code">ssh-keygen</p>
+                        <p class="code">cat ~/.ssh/id_rsa.pub</p>
+                        <p class="code">git config credential.helper store</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>Some extra help</h2>
+                    <div class="textright">
+                        <p><a href="https://github.com/robbyrussell/oh-my-zsh">Oh My Zsh!</a> + git plugin = ❤️</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>Need some GUI help?</h2>
+                    <div class="textright">
+                        <p>GitK (available by default)</p>
+                        <p><a href="https://wiki.gnome.org/action/show/Apps/Gitg?action=show&amp;redirect=Gitg">GitG</a> <a href="https://rowanj.github.io/gitx/">GitX</a> <a href=
+                                    "https://jonas.github.io/tig/">Tig</a></p>
+                        <p><a href="#">Kdiff3</a> <a href="#">Meld</a></p>
+                    </div>
+                </section>
+                <!-- <section> -->
+                <!--     <h2 class="center">Let's create a repo with a remote associated</h2> -->
+                <!-- </section> -->
+                <!-- <section> -->
+                <!--     <h2 class="center">Let's use gitflow with our repo</h2> -->
+                <!-- </section> -->
+                <!-- <section> -->
+                <!--     <h2>Let's do some work</h2> -->
+                <!--     <div class="textright"> -->
+                <!--         <p>add . vs add -u</p> -->
+                <!--         <p>edit - stash - merge</p> -->
+                <!--         <p>reset vs revert</p> -->
+                <!--         <p>push -U</p> -->
+                <!--         <p>push force, bad idea</p> -->
+                <!--     </div> -->
+                <!-- </section> -->
+                <section>
+                    <h2>Resolving conflicts</h2>
+                    <div class="textright">
+                        <p>🙄🙄🙄🙄🙄</p>
+                        <p class="code">git mergetool --tool kdiff3</p>
+                        <p class="code">git add -u / git addu</p>
+                        <p class="code">git commit / git ci</p>
+                        <p class="code"><code>find . -type f -name '*.orig' -delete</code></p>
+                    </div>
+                </section>
+                <section>
+                    <h2>Fire! I lost a bunch of commits!</h2>
+                    <div class="textright">
+                        <p>😰😰😰😰😰</p>
+                        <p class="code"> 💆 + git reflog + git cherry-pick</p>
+                    </div>
+                </section>
 
+                <section>
+                    <h2>Merge vs Rebase</h2>
+                    <div class="textright">
+                        <p>destructive vs non-destructive</p>
+                        <p class="code">git rebase feature/foo</p>
+                        <p class="code">git rebase -i HEAD~5</p>
+                        <p class="code">git pull --rebase </p>
+                        <p>⚠️  If other people is using the target branch... use merge! ⚠️ </p>
+                    </div>
+                </section>
 
-            <section>
-                <h2>Git blame</h2>
-                <img src="img/gitblame.jpg" width="300"/>
-                <div class="textright">
-                    <p class="code">git blame commit..commit -- src/Foo.java -w</p>
-                </div>
-            </section>
+                <section>
+                    <h2>Git blame</h2>
+                    <img src="img/gitblame.jpg" width="300"/>
+                    <div class="textright">
+                        <p class="code">git blame commit..commit -- src/Foo.java -w</p>
+                    </div>
+                </section>
 
+                <section>
+                    <h2>Git submodules</h2>
+                    <div class="textright">
+                        <p class="code">git submodule add git@host:name path/to/submodule</p>
+                        <p class="code">git submodule init</p>
+                        <p class="code">git submodule update path/to/submodule</p>
+                        <p class="code">git submodule rm path/to/submodule</p>
+                        <p class="code">cat .gitmodules</p>
+                    </div>
+                </section>
 
-            <section>
-                <h2>Git submodules</h2>
-                <div class="textright">
-                    <p class="code">git submodule add git@host:name path/to/submodule</p>
-                    <p class="code">git submodule init</p>
-                    <p class="code">git submodule update path/to/submodule</p>
-                    <p class="code">git submodule rm path/to/submodule</p>
-                    <p class="code">cat .gitmodules</p>
-                </div>
-            </section>
+                <section>
+                    <h2>Git Bisect</h2>
+                    <div class="textright">
+                        <h4>git <i>debugging</i></h4>
+                        <p class="code">git bisect start</p>
+                        <p class="code">git bisect good fda82j</p>
+                        <p class="code">git bisect bad hg38h4</p>
+                        <p class="code">check</p>
+                        <p class="code">git bisect bad/good</p>
+                        <p class="code">...</p>
+                    </div>
+                </section>
 
+                <section>
+                    <h2>SVN repository? c'mon</h2>
+                    <div class="textright">
+                        <p class="code">git svn clone svn_url</p>
+                    </div>
+                </section>
 
-            <section>
-                <h2>Git Bisect</h2>
-                <div class="textright">
-                    <h4>git <i>debugging</i></h4>
-                    <p class="code">git bisect start</p>
-                    <p class="code">git bisect good fda82j</p>
-                    <p class="code">git bisect bad hg38h4</p>
-                    <p class="code">check</p>
-                    <p class="code">git bisect bad/good</p>
-                    <p class="code">...</p>
-                </div>
-            </section>
+                <section>
+                    <h2>How do I clone a single branch?</h2>
+                    <div class="textright">
+                        <p class="code">git clone <url> --branch <branch> --single-branch</p>
+                    </div>
+                </section>
 
+                <section>
+                    <h2>References:</h2>
+                    <div class="textright">
+                        <p><a href="https://git-scm.com/book/es/v2">Pro Git book</a></p>
+                        <p><a href="https://github.com/eckelon/dotfiles/blob/master/gitconfig">My gitconfig</a></p>
+                        <!-- <p><a href="https://eckelon.net/howto/2017/10/08/gestionando-proyecto-con-git.html">Short article summarizing this presentation</a></p> -->
+                        <p><a href="https://eckelon.net/tips/2017/01/25/algunos-trucos-git-terminal.html">Some cool zsh functions to manage git repositories from terminal</a></p>
+                        <div/>
+                </section>
+                <section>
+                    <h2 class="center">Questions?</h2>
+                </section>
+                <section>
+                    <h2 class="center">Thank you!</h2>
+                    <!-- <div class="textright"> -->
+                    <!--     <p>Now... let's have a beer!</div> -->
+                    <!-- </div> -->
+                </section>
+                    </div>
+            </div>
+            <script src="lib/js/head.min.js">
+            </script>
+            <script src="js/reveal.js">
+            </script>
+            <script>
+                // More info https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    history: true,
 
-            <section>
-                <h2>SVN repository? c'mon</h2>
-                <div class="textright">
-                    <p class="code">git svn clone svn_url</p>
-                </div>
-            </section>
-
-
-            <section>
-                <h2>How do I clone a single branch?</h2>
-                <div class="textright">
-                    <p class="code">git clone <url> --branch <branch> --single-branch</p>
-                </div>
-            </section>
-
-            <section>
-                <h2>References:</h2>
-                <div class="textright">
-                    <p><a href="https://git-scm.com/book/es/v2">Pro Git book</a></p>
-                    <p><a href="https://github.com/eckelon/dotfiles/blob/master/gitconfig">My gitconfig</a></p>
-                    <p><a href="https://eckelon.net/howto/2017/10/08/gestionando-proyecto-con-git.html">Short article summarizing this presentation</a></p>
-                    <p><a href="https://eckelon.net/tips/2017/01/25/algunos-trucos-git-terminal.html">Some cool zsh functions to manage git repositories from terminal</a></p>
-                <div/>
-            </section>
-            <section>
-                <h2>Questions?</h2>
-            </section>
-            <section>
-                <h2>Thank you!</h2>
-                <div class="textright">
-                    <p>Now... let's have a beer!</div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <script src="lib/js/head.min.js">
-    </script>
-    <script src="js/reveal.js">
-    </script>
-    <script>
-                            // More info https://github.com/hakimel/reveal.js#configuration
-                            Reveal.initialize({
-                                    history: true,
-
-                                    // More info https://github.com/hakimel/reveal.js#dependencies
-                                    dependencies: [
-                                        { src: 'plugin/markdown/marked.js' },
-                                        { src: 'plugin/markdown/markdown.js' },
-                                        { src: 'plugin/notes/notes.js', async: true },
-                                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-                ]
-                            });
-    </script>
-</body>
+                    // More info https://github.com/hakimel/reveal.js#dependencies
+                    dependencies: [
+                        { src: 'plugin/markdown/marked.js' },
+                        { src: 'plugin/markdown/markdown.js' },
+                        { src: 'plugin/notes/notes.js', async: true },
+                        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                    ]
+                });
+            </script>
+    </body>
 </html>
