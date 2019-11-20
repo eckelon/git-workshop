@@ -94,12 +94,13 @@
                     <h2>remotes</h2>
                     <h6>That <i>origin</i> stuff is familiar, right?</h6>
                     <div class="textright">
-                        <p class=" code"><code>git pull origin develop</code></p>
-                        <p class=" code"><code>git pull kitten develop</code></p>
-                        <p class=" code"><code>git push origin develop</code></p>
-                        <p class=" code"><code>git push kitten develop</code></p>
+                        <p class="code"><code>git pull origin develop</code></p>
+                        <p class="code"><code>git pull kitten develop</code></p>
+                        <p class="code"><code>git push origin develop</code></p>
+                        <p class="code"><code>git push kitten develop</code></p>
                     </div>
                 </section>
+
                 <section data-transition="zoom">
                     <h2>I want my own branch!</h2>
                     <div class="textright">
@@ -125,6 +126,16 @@
                 <section data-transition="zoom">
                     <h2>Recap</h2><img src="img/commands.jpg">
                 </section>
+
+                <section data-transition="zoom">
+                    <h2>Where is my HEAD?</h2>
+                    <div class="textright">
+                        <p>Pointer to a commit</p>
+                        <p>Decouple branches</p>
+                    </div>
+                </section>
+                
+
                 <section data-transition="zoom">
                     <h2>A bit of methodology:</h2>
                     <div class="textright">
@@ -133,6 +144,16 @@
                 </section>
                 <section data-transition="zoom">
                     <h2>Gitflow</h2><img src="img/gitflow.png">
+                </section>
+                <section data-transition="zoom">
+                    <h2>Good practices with Git Flow (and in general)</h2>
+                    <div class="textright">
+                        <p>Protect main branches</p>
+                        <p>Pull request better than merge</p>
+                        <p>Code reviews</p>
+                        <p>Jenkins reviews</p>
+                        <p>Tag important commits, mainly releases</p>
+                    </div>
                 </section>
                 <section data-transition="zoom">
                     <h2>Merges</h2>
@@ -162,6 +183,37 @@
                         <p>More commits than pushes</p>
                     </div>
                 </section>
+
+                <section>
+                    <h2>History commands</h2>
+                    <div class="textright">
+                        <p><code>git log</code></p>
+                        <p><code>git show</code></p>
+                        <p><code>git status</code></p>
+                        <p><code>git tag</code></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Useful commits save lifes</h2>
+                    <div class="textright">
+                        <h6>No more...</h6>
+                        <p>[WIP, fix, test, dummy, etc.] commits</p>
+                        <p>Connect with Jira -> [AN-1234] My awsome feature</p>
+                        <p>Damm! I forget... -> <code>git commit --ammend</code></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>So... Let's review my history!</h2>
+                    <div class="textright">
+                        <p><code>git rev-list</code></p>
+                        <p><code>git name-rev</code></p>
+                    </div>
+                </section>
+
+
+
                 <!-- <section> -->
                 <!--     <h2 class="center">Demo</h2> -->
                 <!-- </section> -->
@@ -188,7 +240,18 @@
                         <p><a href="https://wiki.gnome.org/action/show/Apps/Gitg?action=show&amp;redirect=Gitg">GitG</a> <a href="https://rowanj.github.io/gitx/">GitX</a> <a href=
                                     "https://jonas.github.io/tig/">Tig</a></p>
                         <p><a href="#">Kdiff3</a> <a href="#">Meld</a></p>
+                        <p><a href="https://www.gitkraken.com/">GitKraken</a></p>
                     </div>
+                </section>
+
+                <section>
+                    <h2>GitKraken branch tree</h2>
+                    <img src="img/gitkraken.png">
+                </section>
+                <section>
+                    <h2>Some help please...</h2>
+                    <img src="img/gitkraken_referral.png">
+                    <h4><a href="https://www.gitkraken.com/invite/9btZ1NtT">https://www.gitkraken.com/invite/9btZ1NtT</a></h4>
                 </section>
                 <!-- <section> -->
                 <!--     <h2 class="center">Let's create a repo with a remote associated</h2> -->
@@ -225,7 +288,7 @@
                 </section>
 
                 <section>
-                    <h2>Merge vs Rebase</h2>
+                    <h2>Merge vs Rebase vs Squash</h2>
                     <div class="textright">
                         <p>destructive vs non-destructive</p>
                         <p class="code">git rebase feature/foo</p>
@@ -233,6 +296,16 @@
                         <p class="code">git pull --rebase </p>
                         <p>⚠️  If other people is using the target branch... use merge! ⚠️ </p>
                     </div>
+                </section>
+
+                <section>
+                    <h2>Merge vs Rebase vs Squash (2)</h2>
+                    <img width="600" height="450" src="img/merge_rebase.png">
+                </section>
+
+                <section>
+                    <h2>Merge vs Rebase vs Squash (3)</h2>
+                    <img width="600" height="450"src="img/squash.jpg">
                 </section>
 
                 <section>
@@ -282,11 +355,100 @@
                 </section>
 
                 <section>
+                    <h2>Bad practices</h2>
+                    <div class="textright">
+                        <p class="code"><code>git becario</code> -> Remove all history</p>
+                        <p class="code"><code>git revert</code> -> Usually bad stuff</p>
+                        <p>Close main branches -> Dangerous...</p>
+                        <p>Generate release with pending changes -> Use <code>git status</code></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="center">Use cases</h2>
+                </section>
+
+                <section>
+                    <h2>Use case 1: Repository migration</h2>
+                    <h4>(or custom fork)</h4>
+                </section>
+
+                <section data-transition="zoom">
+                    <h2>Use case 1: repo migration</h2>
+                    <h6>metrics-investigations -> metrics-tasker</h6>
+                    <div class="textright">
+                        <p class="code"><code>git pull</code></p>
+                        <p class="code"><code>git remote add my_new_origin &lt;URL&gt;</code></p>
+                        <p class="code"><code>git push my_new_origin my_oldfashion_master</code></p>
+                    </div>
+                </section>
+ 
+               <section data-transition="zoom">
+                    <h2>Use case 1: repo migration</h2>
+                    <h6>But... I want to name it right!</h6>
+                    <div class="textright">
+                        <p class="code"><code>git push my_new_origin my_oldfashion_master:master</code></p>
+                        <p>Error! The master branch is already in the remote origin!</p>
+                        <h6>May the --force be with you, Luke</h6>
+                        <p class="code"><code>git push my_new_origin my_oldfashion_master:master --force</code></p>
+                    </div>
+                </section>
+
+                <section data-transition="zoom">
+                    <h2>Use case 1: repo migration (3)</h2>
+                    <h6>But... Do you remember Uncle Ben?</h6>
+                    <div class="textright">
+                        <img src="img/uncle_ben.jpg">
+                    </div>
+                    <div class="textleft">
+                        <br>
+                        <br>
+
+                        <h6>Somewhere in the other side of the galaxy...</h6>
+                        <h3>F**K!!! THE REPO HAS BEEN REMOVED!</h3>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="center">Use case 2: Release versioning</h2>
+                </section>
+
+                <section data-transition="zoom">
+                    <h2>Use case 2: Release versioning</h2>
+                    <h5>Let's make metrics -> "mt-X.Y.Z{_TAG_DATE_COMMIT}"</h5>
+                    <div class="textleft">
+                        <h6>Production</h6>
+                        <p>X: Release version - Major version code</p>
+                        <p>Y: Release candidate - Fixes during the stagging step</p>
+                        <p>Z: Build code - Incremental number</p>
+                    </div>
+                </section>
+
+                <section data-transition="zoom">
+                    <h2>Use case 2: Release versioning (2)</h2>
+                    <h5>Let's make metrics -> "mt-X.Y.Z{_TAG_DATE_COMMIT}"</h5>
+                    <div class="textleft">
+                        <h6>Debug - Features or fixes</h6>
+                        <p>TAG: Jira target</p>
+                        <p>DATE: Current date</p>
+                        <p>COMMIT: commit hash</p>
+                    </div>
+                </section>
+
+                <section data-transition="zoom">
+                    <h2>Use case 2: Release versioning (3)</h2>
+                        <img src="img/jenkins.png">
+                        <img width="550" height="255" src="img/git_logo.png">
+                    <h3><a href="https://bitbucket.org/case-on-it/metrics-tasker/src/develop/Jenkinsfile">JENKINSFILE</a></h3>
+                </section>
+
+                <section>
                     <h2>References:</h2>
                     <div class="textright">
                         <p><a href="https://git-scm.com/book/es/v2">Pro Git book</a></p>
-                        <p><a href="https://github.com/eckelon/dotfiles/blob/master/gitconfig">My gitconfig</a></p>
-                        <!-- <p><a href="https://eckelon.net/howto/2017/10/08/gestionando-proyecto-con-git.html">Short article summarizing this presentation</a></p> -->
+                        <p><a href="https://github.com/eckelon/dotfiles/blob/master/.gitconfig">Example <span class="code">.gitconfig</span></a></p>
+                        <p><a href="https://github.com/wfxr/forgit">Forgit, utility tool for git taking advantage of fuzzy finder fzf.</a></p>
+                     <!-- <p><a href="https://eckelon.net/howto/2017/10/08/gestionando-proyecto-con-git.html">Short article summarizing this presentation</a></p> -->
                         <p><a href="https://eckelon.net/tips/2017/01/25/algunos-trucos-git-terminal.html">Some cool zsh functions to manage git repositories from terminal</a></p>
                         <div/>
                 </section>
